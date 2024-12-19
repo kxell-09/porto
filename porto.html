@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS for fade-in effect */
+        section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s, transform 1s;
+        }
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Centering social links */
+        .social-link, .social-dc {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 1rem 0;
+        }
+
+        .social-link p, .social-dc p {
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+
+        .social-link a, .social-dc a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .social-link img, .social-dc img {
+            margin-right: 10px;
+        }
+
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        section {
+            padding: 3rem;
+            margin: 2rem 0;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Button style for YouTube link */
+        .youtube-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .youtube-btn:hover {
+            background-color: #cc0000;
+        }
+
+        form label, form input, form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with navigation menu -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="http://127.0.0.1:5501/background.html">My Background</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>Hello, I'm Gilang Ramadhan</h1>
+        <p>I am a professional motorcycle mechanic. Welcome to my portfolio!</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>I restored a Yamaha F1ZR motorbike to look like new with some light modifications.</p>
+            <a href="http://127.0.0.1:5501/foto.html" target="_blank">View Photos</a>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>I successfully repaired and modified a Honda C70 motorbike, transforming it into a classic with a modern touch.</p>
+            <a href="https://example.com/foto-c70.jpg" target="_blank">View Photos</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <!-- Background section -->
+        
+        <!-- Discord Link with Logo, centered -->
+        <div class="social-dc">
+            <p>If you want to contact me via Discord</p>
+            <a href="https://discord.com/users/701481440487145513" target="_blank">
+                <img src="download.jpg" alt="Discord Logo" width="40" height="30">
+            </a>
+        </div>
+
+        <!-- YouTube Button with Logo, centered -->
+       <!-- YouTube Button with Logo -->
+<div class="social-link">
+    <p>Check out my YouTube channel:</p>
+    <a href="https://www.youtube.com/@kxell1.1.1.1" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" style="width: 50px; height: 40px;">
+    </a>
+</div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Gilang Ramadhan. All rights reserved.</p>
+    </footer>
+
+<!-- Button to go to the Projects section -->
+<a href="#projects" class="projects-btn">Go to Projects</a>
+
+
+
+    <!-- JavaScript for fade-in effect on scroll -->
+    <script>
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', function() {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

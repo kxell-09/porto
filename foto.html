@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project yang Saya Kerjakan</title>
+    <style>
+        /* Gaya Dasar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        /* Header dengan Border Smooth */
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            margin: 0;
+            font-size: 2.5rem;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        li {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.6s ease, opacity 0.6s ease, box-shadow 0.3s ease;
+            width: 300px;
+            cursor: pointer;
+            opacity: 0; /* Animasi masuk */
+            transform: translateY(50px) scale(0.9) rotate(5deg); /* Mulai dari bawah dengan sedikit rotasi dan zoom */
+            transition: all 0.8s ease;
+        }
+
+        li.visible {
+            opacity: 1; /* Elemen terlihat */
+            transform: translateY(0) scale(1) rotate(0deg); /* Kembali ke posisi normal */
+        }
+
+        li:hover {
+            transform: translateY(-10px) scale(1.05); /* Efek saat hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 1rem;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            max-width: 90%;
+            margin: 20px auto;
+        }
+
+        @media (max-width: 768px) {
+            li {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ini adalah foto-foto web yang saya buat</h1>
+    <ul>
+        <li><img src="fizr4.jpg" alt="Foto 1"></li>
+        <li><img src="fizr4.jpg" alt="Foto 2"></li>
+        <li><img src="fizr4.jpg" alt="Foto 3"></li>
+    </ul>
+    <footer>© 2024 Project Saya</footer>
+
+    <script>
+        // Script untuk animasi saat elemen masuk
+        const items = document.querySelectorAll('li');
+
+        // Fungsi untuk mendeteksi elemen yang sudah terlihat di viewport
+        function checkVisibility() {
+            items.forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    item.classList.add('visible');
+                }
+            });
+        }
+
+        // Menambahkan event scroll untuk memeriksa elemen yang terlihat
+        window.addEventListener('scroll', checkVisibility);
+
+        // Menjalankan fungsi saat halaman pertama kali dimuat
+        document.addEventListener('DOMContentLoaded', checkVisibility);
+    </script>
+</body>
+</html>

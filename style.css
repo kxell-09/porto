@@ -1,0 +1,234 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient dengan biru dan ungu */
+    color: #fff; /* Warna teks putih untuk kontras */
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Header */
+header {
+    background: #333; /* Latar belakang gelap untuk header */
+    color: #fff; /* Warna teks putih */
+    padding: 1rem 0;
+    text-align: center;
+    animation: slideIn 1s ease-out; /* Animasi slide in */
+}
+
+/* Animasi untuk navigasi header */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out 1s forwards;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12; /* Warna cerah saat hover */
+}
+
+/* Efek animasi saat scroll untuk section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* About Section */
+#about {
+    background: #f4f4f4; /* Latar belakang abu-abu terang */
+    color: #333; /* Warna teks gelap */
+    padding: 3rem;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out 0.5s forwards; /* Animasi fade in untuk section */
+}
+
+/* Projects Section */
+#projects {
+    background: #fff; /* Latar belakang putih untuk section proyek */
+    color: #333;
+    padding: 3rem;
+    animation: fadeIn 1.5s ease-out 1s forwards; /* Efek fade-in saat section proyek muncul */
+}
+
+.project {
+    border: 1px solid #ddd;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05); /* Memperbesar sedikit saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    color: #333;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project a:hover {
+    color: #0056b3; /* Warna lebih gelap saat hover */
+}
+
+/* Contact Section */
+#contact {
+    background: #f9f9f9; /* Latar belakang cerah untuk section kontak */
+    padding: 3rem 1rem;
+    animation: fadeIn 1.5s ease-out 1.5s forwards; /* Efek fade-in untuk section kontak */
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: slideInForm 1s ease-out forwards; /* Animasi form muncul dari bawah */
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+#contact input, #contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+#contact input:focus, #contact textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#contact button {
+    display: block;
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#contact button:hover {
+    background: #0056b3; /* Warna lebih gelap saat hover */
+}
+
+/* Footer */
+footer {
+    background: #333; /* Latar belakang footer gelap */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Animasi untuk form contact */
+@keyframes slideInForm {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Gaya tombol untuk link YouTube tanpa latar belakang merah */
+/* Gaya tombol untuk link YouTube tanpa latar belakang merah pada teks */
+.youtube-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Tidak ada latar belakang */
+    color: #FF0000; /* Warna teks merah */
+    padding: 10px 20px;
+    border: 2px solid #FF0000; /* Border merah di sekitar tombol */
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.social-dc {
+    text-align: center;
+    
+}
+
+
+
+.youtube-btn:hover {
+    background-color: transparent; /* Tidak ada latar belakang saat hover */
+    border-color: #cc0000; /* Warna border lebih gelap saat hover */
+    color: #cc0000; /* Warna teks lebih gelap saat hover */
+}
+/* Animasi bounce-in untuk tombol */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
